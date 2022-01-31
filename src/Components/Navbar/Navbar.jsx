@@ -4,14 +4,14 @@ import Dropdown from '../Dropdown/Dropdown'
 
 import { CgProfile } from 'react-icons/cg'
 import { AiOutlineBell } from 'react-icons/ai'
-import {GoSignOut} from 'react-icons/go'
+import { GoSignOut } from 'react-icons/go'
 
 const Navbar = () => {
     const [showProfileLinks, setProfileLinks] = useState(false)
     const [isProfileClicked, setProfileClicked] = useState(false)
 
     const node = useRef()
-    
+
     useEffect(() => {
         const handleClick = () => {
             setProfileLinks(false)
@@ -23,7 +23,11 @@ const Navbar = () => {
         };
     }, [])
 
-    if(isProfileClicked){
+    function sayHello(){
+        alert('hi')
+    }
+
+    if(isProfileClicked) {
         alert('hi')
     }
 
@@ -39,8 +43,8 @@ const Navbar = () => {
                 {
                     showProfileLinks ? (
                         <div className={styles.profile_links_container} >
-                            <Dropdown icon={<CgProfile />} detail={'Profile'} onClick={() => setProfileClicked(true)} />
-                            <Dropdown icon={<GoSignOut />} detail={'Sign Out'} />
+                            <div onClick={sayHello}><Dropdown icon={<CgProfile />} detail={'Profile'} /></div>
+                            <div><Dropdown icon={<GoSignOut />} detail={'Sign Out'} /></div>
                         </div>
                     ) : <></>
                 }
