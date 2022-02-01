@@ -18,6 +18,11 @@ const Login = () => {
                     <input type="password" placeholder="Password" className={styles.password}/>
                 </div>
 
+                <div className={styles.remember_container}>
+                    <input type="checkbox" placeholder="Remember"/>
+                    Remember me
+                </div>
+
                 <button>Login</button>
 
                 <hr/>
