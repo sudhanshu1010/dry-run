@@ -11,7 +11,8 @@ const App = () => {
     <div className={styles.app_main_container}>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Dashboard/>} />
+          <Route exact path="/dry-run" element={<Dashboard/>} />
+          <Route path="/" element={<Dashboard/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
         </Routes>
