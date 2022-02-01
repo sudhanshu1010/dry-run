@@ -23,11 +23,22 @@
 }
 
 .navbar_mid_container {
-    width: 30%;
+    width: 20%;
+    font-size: 90%;
+}
+
+.navbar_mid_container a {
+    text-decoration: none;
+    color: rgb(199, 199, 199);
+    transition: all .2s ease-in;
+}
+
+.navbar_mid_container a:hover {
+    color: #fff;
 }
 
 .navbar_right_container {
-    width: 5%;
+    width: 4%;
     position: relative;
 }
 
@@ -41,6 +52,11 @@
 
 .user_icons_container > * {
     cursor: pointer;
+    opacity: .9;
+}
+
+.user_icons_container > *:hover {
+    opacity: 1;
 }
 
 .profile_links_container {

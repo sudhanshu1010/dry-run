@@ -23,27 +23,24 @@ const Navbar = () => {
         };
     }, [])
 
-    function sayHello(){
-        alert('hi')
-    }
-
-    if(isProfileClicked) {
-        alert('hi')
-    }
-
     return (
         <div ref={node} className={styles.navbar_main_container}>
             <div className={styles.navbar_left_container}>Dryrun</div>
-            <div className={styles.navbar_mid_container}>Hi</div>
+            <div className={styles.navbar_mid_container}>
+                <a href="#">Explore</a>
+                <a href="#">Problems</a>
+                <a href="#">Discuss</a>
+
+            </div>
             <div className={styles.navbar_right_container}>
                 <div className={styles.user_icons_container}>
-                    <AiOutlineBell title="Notifications" />
                     <CgProfile title="User profile" onClick={() => { setProfileLinks(!showProfileLinks) }} />
+                    <AiOutlineBell title="Notifications" />
                 </div>
                 {
                     showProfileLinks ? (
                         <div className={styles.profile_links_container} >
-                            <div onClick={sayHello}><Dropdown icon={<CgProfile />} detail={'Profile'} /></div>
+                            <div ><Dropdown icon={<CgProfile />} detail={'Profile'} /></div>
                             <div><Dropdown icon={<GoSignOut />} detail={'Sign Out'} /></div>
                         </div>
                     ) : <></>
