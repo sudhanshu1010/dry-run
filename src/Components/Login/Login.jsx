@@ -3,6 +3,9 @@ import styles from './Login.module.css'
 import { MdAlternateEmail } from 'react-icons/md'
 import { FiKey } from 'react-icons/fi'
 import { AiOutlineClear, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
+import {FcGoogle} from 'react-icons/fc'
+import '../Button/Button.css'
+
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -15,19 +18,19 @@ const Login = () => {
 
     const validateEmail = (email) => {
         var isValid = String(email)
-          .toLowerCase()
-          .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          );
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
 
-          return isValid
-      };
+        return isValid
+    };
 
     function handleEmail(emailValue) {
         var isValid = validateEmail(emailValue)
         setEmail(emailValue)
 
-        if(!isValid){
+        if (!isValid) {
             setEmailError(true)
         } else setEmailError(false)
     }
@@ -70,16 +73,26 @@ const Login = () => {
                 }
 
                 <div className={styles.remember_container}>
-                    <input type="checkbox" placeholder="Remember"/>
+                    <input type="checkbox" placeholder="Remember" />
                     <small>Remember me</small>
                 </div>
 
-                <button>Login</button>
+                <button className="btn">Login</button>
 
-                <hr />
+                <div className={styles.divider}>
+                    <div></div>
+                    <small>OR</small>
+                    <div></div>
+                </div>
+
+                <div className={styles.login_alternates_container}>
+                    <div className={styles.login_alternate_text}>Login with</div>
+                    <div className={styles.login_alternate_logo}><FcGoogle /></div>
+                </div>
 
 
             </div>
+            <a href="#">Forget password?</a>
         </div>
     )
 }
