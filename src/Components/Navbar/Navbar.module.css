@@ -72,3 +72,36 @@
     background-color: #fff;
     box-shadow: 0 0 2vh .1vh lightgrey;
 }
+
+
+/*  */
+.dropdown_main_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2% 4%;
+    cursor: pointer;
+    backdrop-filter: blur(5vh);
+    transition: all 0.2s ease-in;
+    z-index: 1000;
+}
+
+.dropdown_main_container:hover {
+    background-color: rgb(233, 233, 233);
+    color: #000;
+}
+
+.dropdown_icon {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid lightgrey;
+}
+
+.dropdown_detail {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1vw;
+    font-size: 90%;
+}
