@@ -3,7 +3,7 @@ import styles from './Login.module.css'
 import { MdAlternateEmail } from 'react-icons/md'
 import { FiKey } from 'react-icons/fi'
 import { AiOutlineClear, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import {FcGoogle} from 'react-icons/fc'
+import { FcGoogle } from 'react-icons/fc'
 import '../Button/Button.css'
 
 
@@ -85,9 +85,12 @@ const Login = () => {
                     <div></div>
                 </div>
 
-                <div className={styles.login_alternates_container}>
-                    <div className={styles.login_alternate_text}>Login with</div>
-                    <div className={styles.login_alternate_logo}><FcGoogle /></div>
+                {/* <div className={styles.login_alternates_container}>
+                    <div className={styles.login_alternate_text}>Login with Google</div>
+                </div> */}
+
+                <div className={styles.register_content_container}>
+                    <p>New to dryrun? <a href="#">Create account</a></p>
                 </div>
 
 

@@ -21,7 +21,7 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 30%;
     padding: 2%;
-    margin: 1%;
+    margin: .5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +63,6 @@
 
 .input_logo_container, .options_container {
     color: rgb(158, 158, 158);
-    
 }
 
 .options_container {
@@ -72,7 +71,6 @@
 }
 
 .options_container:hover {
-    
     color: #000;
 }
 
@@ -84,12 +82,11 @@
     color: rgb(245, 112, 112);
 }
 
-
 .remember_container {
     font-size: 2.5vh;
     font-weight: 350;
     color: rgb(88, 87, 87);
-    height: 5vh;
+    height: 4vh;
     display: flex;
     align-items: center;
 }
@@ -120,13 +117,37 @@
 }
 
 .login_alternates_container {
-    height: 15%;
-    width: 30% !important;
+    height: 10%;
+    width: 50% !important;
     background-color: rgb(255, 255, 255, .5);
     margin-top: 5%;
+    padding: 3%;
     display: flex;
     align-items:center;
-    border-radius: 2vh;
+    justify-content: space-around;
+    border-radius: 2.5vh;
     cursor: pointer;
     border: 1px solid grey;
+    transition: all .3s ease-in-out;
+}
+
+.login_alternates_container:hover {
+    background-color: #fff;
+}
+
+.login_alternates_container  > * {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.register_content_container {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register_content_container p {
+    margin: 0;
 }
